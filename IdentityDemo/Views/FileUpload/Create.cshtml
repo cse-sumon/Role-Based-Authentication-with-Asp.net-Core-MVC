@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add New File</h2>
+<p><a asp-action="Index">View the list of file</a></p>
+<div class="row">
+    <div class="col-md-6">
+        <form asp-controller="FileUpload" asp-action="Create" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Name</label>
+                <input class="form-control" type="text" name="Name" />
+            </div>
+            <div class="form-group">
+                <label>File</label>
+                <input class="form-control" type="file" name="File" />
+            </div>
+            <div class="form-group">
+             <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+﻿@model IdentityDemo.Models.FileUpload
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FileUpload</h4>
+    <hr />
+    <div class="card col-md-12" style="margin-bottom:50px">
+        <div>
+            <h3>@Model.Name</h3>
+        </div>
+        <div>
+            <img src="~/images/@Model.File" width="200" height="170" />
+        </div>
+
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </div>
+</div>
+
